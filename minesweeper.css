@@ -8,6 +8,7 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  background: url(images/backgroung-Wallpaper-Poster-Design-9.jpg);
 }
 
 #message, #notes {
@@ -17,7 +18,7 @@ body {
 }
 
 #message {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .board {
@@ -57,4 +58,13 @@ div.hidden:hover {
 
 div.marked, div.marked:hover {
   background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+}
+
+button{
+  background-color: #ff0066;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.4rem;
+  margin: 10px;
 }
