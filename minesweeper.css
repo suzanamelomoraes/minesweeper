@@ -24,6 +24,22 @@ body {
 
 }
 
+#level {
+  display: inline;
+}
+
+#levelEasy {
+  font-size: 1.6rem;
+}
+
+#levelMedium {
+  font-size: 1.6rem;
+}
+
+#levelHard {
+  font-size: 1.6rem;
+}
+
 .board {
   display: flex;
   flex-wrap: wrap;

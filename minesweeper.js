@@ -51,7 +51,8 @@ function createBoard(size) {
   return board
 }
 
-createBoard(3);
+createBoard(6);
+
 
 
 function startGame() {
@@ -120,8 +121,5 @@ function countSurroundingMines(cell) {
   return count
 }
 
-function restart(){
-  document.location.reload();
-}
 
 console.log(board);
