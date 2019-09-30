@@ -64,19 +64,15 @@ function startGame() {
   lib.initBoard()
 }
 
-
 // Define this function to look for a win condition:
 //
 // 1. Are all of the cells that are NOT mines visible?
 // 2. Are all of the mines marked?
 function checkForWin() {
   let applause = new Audio("sounds/applause.mp3")
-  var boom = new Audio("sounds/explosion.mp3")
     
   for (var i = 0; i < board.cells.length; i++) {
-    if (board.cells[i].isMine && !board.cells[i].hidden){
-      boom.play();
-    } else if (board.cells[i].isMine && !board.cells[i].isMarked){
+    if (board.cells[i].isMine && !board.cells[i].isMarked){
       return
 
     } else if (board.cells[i].isMarked && !board.cells[i].hidden) {
@@ -100,6 +96,15 @@ function playClick(){
 document.addEventListener("click", playClick)
 document.addEventListener("contextmenu", playClick)
 
+function playBoom (){
+  var boom = new Audio("sounds/explosion.mp3")
+  for (var i = 0; i < board.cells.length; i++){
+    if((board.cells[i].isMine && !board.cells[i].hidden)){
+      boom.play();
+    }
+  }
+}
+document.addEventListener("click", playBoom)
 
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding
@@ -124,5 +129,3 @@ function countSurroundingMines(cell) {
 function restart(){
   document.location.reload();
 }
-
-console.log(board);
