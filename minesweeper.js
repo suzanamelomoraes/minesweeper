@@ -121,5 +121,8 @@ function countSurroundingMines(cell) {
   return count
 }
 
+function restart(){
+  document.location.reload();
+}
 
 console.log(board);
